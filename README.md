@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -25,40 +26,40 @@
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
-            -webkit-text-size-adjust: 100%;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
-            width: 100%;
         }
         
         /* Header Styles */
         header {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/logo1.jpg') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
-            min-height: 50vh;
+            min-height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .tagline {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            padding: 0 10px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            padding: 0 15px;
         }
         
         /* Navigation */
@@ -67,22 +68,18 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
         }
         
         nav ul {
             display: flex;
             justify-content: center;
             list-style: none;
-            padding: 10px 0;
-            flex-wrap: nowrap;
-            white-space: nowrap;
-            min-width: 100%;
+            padding: 15px 0;
+            flex-wrap: wrap;
         }
         
         nav ul li {
-            margin: 0 8px;
+            margin: 5px 10px;
         }
         
         nav ul li a {
@@ -90,32 +87,35 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            font-size: 0.85rem;
-            padding: 5px 8px;
-            display: block;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
         }
         
         /* Main Content */
         section {
-            padding: 30px 0;
+            padding: 40px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             color: var(--dark);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             position: relative;
-            padding: 0 10px;
+            padding: 0 15px;
         }
         
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
+            width: 60px;
             height: 3px;
             background-color: var(--primary);
-            margin: 8px auto;
+            margin: 10px auto;
         }
         
         /* About Section */
@@ -123,39 +123,55 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
         }
         
         .about-text {
             width: 100%;
-            padding: 0 10px;
-            font-size: 0.95rem;
+            padding: 0 15px;
         }
         
         .about-image {
             width: 100%;
-            max-width: 100%;
-            border-radius: 8px;
+            max-width: 500px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image img:hover {
+            transform: scale(1.05);
         }
         
         /* Menu Section */
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 15px;
+            gap: 20px;
         }
         
         .menu-item {
             background-color: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
         
         .menu-image {
-            height: 180px;
+            height: 200px;
             overflow: hidden;
         }
         
@@ -163,175 +179,232 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .menu-item:hover .menu-image img {
+            transform: scale(1.1);
         }
         
         .menu-details {
-            padding: 12px;
+            padding: 15px;
         }
         
         .menu-title {
-            font-size: 1.1rem;
-            margin-bottom: 6px;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--dark);
         }
         
         .menu-description {
             color: #666;
-            margin-bottom: 8px;
-            font-size: 0.85rem;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
         }
         
         .menu-price {
             font-weight: bold;
             color: var(--primary);
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         
         /* Why Us Section */
         .features {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 20px;
+            margin-top: 30px;
         }
         
         .feature {
             text-align: center;
-            padding: 15px;
+            padding: 20px 15px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
         }
         
         .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
         }
         
         .feature-title {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark);
         }
         
         .feature p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
         
         /* Promo Section */
         .promo-banner {
             background: linear-gradient(135deg, var(--primary), #c1121f);
             color: white;
-            padding: 20px 15px;
+            padding: 30px 20px;
             border-radius: 8px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         .promo-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
         }
         
         .promo-description {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            max-width: 100%;
         }
         
         .cta-button {
             display: inline-block;
             background-color: white;
             color: var(--primary);
-            padding: 8px 20px;
+            padding: 10px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            transition: all 0.3s;
             border: 2px solid white;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: white;
         }
         
         /* Contact Section */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 15px;
+            gap: 20px;
         }
         
         .contact-info {
-            padding: 15px;
+            background-color: var(--dark);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
         }
         
         .contact-title {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--accent);
         }
         
         .contact-item {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
         }
         
         .contact-icon {
-            margin-right: 8px;
-            font-size: 0.9rem;
+            margin-right: 10px;
+            font-size: 1rem;
+            color: var(--accent);
         }
         
         .contact-form {
-            padding: 15px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
         
         .form-group {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
         
         .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
             font-size: 0.9rem;
         }
         
         .form-group input,
         .form-group textarea {
-            padding: 7px 10px;
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-size: 0.9rem;
         }
         
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
         .submit-button {
-            padding: 8px 20px;
-            font-size: 0.9rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background-color: #c1121f;
         }
         
         /* Footer */
         footer {
-            padding: 20px 0 10px;
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0 15px;
+            text-align: center;
         }
         
         .social-links {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
         
         .social-links a {
-            font-size: 0.9rem;
+            color: white;
+            font-size: 1rem;
+            margin: 0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            gap: 8px;
+        }
+        
+        .social-links a i {
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
         }
         
         .copyright {
-            font-size: 0.75rem;
+            margin-top: 15px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
         }
         
         /* Responsive Adjustments */
-        @media (min-width: 400px) {
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 1.1rem;
-            }
-            
-            nav ul li a {
-                font-size: 0.9rem;
-            }
-        }
-        
         @media (min-width: 576px) {
             .menu-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -344,29 +417,47 @@
             .social-links {
                 flex-direction: row;
                 flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .social-links a {
+                margin: 0 10px;
             }
         }
         
         @media (min-width: 768px) {
-            header {
-                min-height: 60vh;
-                padding: 80px 0;
-            }
-            
             .logo {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             
             .tagline {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            nav ul li a {
+                font-size: 1rem;
             }
             
             .section-title {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
+                margin-bottom: 40px;
+            }
+            
+            .section-title::after {
+                width: 80px;
+                height: 4px;
             }
             
             .about-content {
                 flex-direction: row;
+            }
+            
+            .about-text {
+                padding: 0;
             }
             
             .menu-grid {
@@ -375,6 +466,18 @@
             
             .features {
                 grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .promo-banner {
+                padding: 50px;
+            }
+            
+            .promo-title {
+                font-size: 2rem;
+            }
+            
+            .promo-description {
+                font-size: 1.2rem;
             }
             
             .contact-grid {
@@ -388,23 +491,9 @@
             }
         }
         
-        /* Fix for very small devices */
-        @media (max-width: 360px) {
-            .logo {
-                font-size: 1.6rem;
-            }
-            
-            .tagline {
-                font-size: 0.9rem;
-            }
-            
-            nav ul li a {
-                font-size: 0.8rem;
-                padding: 5px;
-            }
-            
-            .section-title {
-                font-size: 1.3rem;
+        @media (min-width: 1200px) {
+            .menu-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             }
         }
     </style>
@@ -454,7 +543,7 @@
         <div class="container">
             <h2 class="section-title">Pilihan Sambal Eksklusif</h2>
             <div class="menu-grid">
-                <!-- Menu Items (same as before) -->
+                <!-- Menu Item 1 -->
                 <div class="menu-item">
                     <div class="menu-image">
                         <img src="images/original.jpg" alt="Sambal Seuhah Original">
@@ -466,6 +555,7 @@
                     </div>
                 </div>
                 
+                <!-- Menu Item 2 -->
                 <div class="menu-item">
                     <div class="menu-image">
                         <img src="images/kemangi.jpg" alt="Sambal Hijau Kemangi">
@@ -477,6 +567,7 @@
                     </div>
                 </div>
                 
+                <!-- Menu Item 3 -->
                 <div class="menu-item">
                     <div class="menu-image">
                         <img src="images/bawang.jpg" alt="Sambal Bawang Super Pedas">
@@ -488,6 +579,7 @@
                     </div>
                 </div>
                 
+                <!-- Menu Item 4 -->
                 <div class="menu-item">
                     <div class="menu-image">
                         <img src="images/terasi.jpg" alt="Sambal Terasi Bakar">
@@ -499,6 +591,7 @@
                     </div>
                 </div>
                 
+                <!-- Menu Item 5 -->
                 <div class="menu-item">
                     <div class="menu-image">
                         <img src="images/mangga.jpg" alt="Sambal Mangga Muda">
@@ -510,6 +603,7 @@
                     </div>
                 </div>
                 
+                <!-- Menu Item 6 -->
                 <div class="menu-item">
                     <div class="menu-image">
                         <img src="images/manado.jpg" alt="Sambal Dabu-Dabu Manado">
@@ -521,6 +615,7 @@
                     </div>
                 </div>
                 
+                <!-- Menu Item 7 -->
                 <div class="menu-item">
                     <div class="menu-image">
                         <img src="images/kacang.jpg" alt="Sambal Kacang Pedas">
@@ -540,6 +635,7 @@
         <div class="container">
             <h2 class="section-title">Kenapa Pilih Sambal Seuhah?</h2>
             <div class="features">
+                <!-- Feature 1 -->
                 <div class="feature">
                     <div class="feature-icon">
                         <i class="fas fa-leaf"></i>
@@ -548,6 +644,7 @@
                     <p>Dibuat dari bahan-bahan segar pilihan tanpa pengawet atau bahan kimia tambahan.</p>
                 </div>
                 
+                <!-- Feature 2 -->
                 <div class="feature">
                     <div class="feature-icon">
                         <i class="fas fa-fire-alt"></i>
@@ -556,6 +653,7 @@
                     <p>Kami menyediakan level pedas dari Mild, Medium, hingga Extra Hot sesuai selera Anda.</p>
                 </div>
                 
+                <!-- Feature 3 -->
                 <div class="feature">
                     <div class="feature-icon">
                         <i class="fas fa-box-open"></i>
@@ -564,6 +662,7 @@
                     <p>Dikemas dengan standar kebersihan tinggi dan aman untuk dikirim ke seluruh Indonesia.</p>
                 </div>
                 
+                <!-- Feature 4 -->
                 <div class="feature">
                     <div class="feature-icon">
                         <i class="fas fa-tags"></i>
@@ -634,7 +733,7 @@
                 
                 <div class="contact-form">
                     <h3 class="contact-title">Kirim Pesan</h3>
-                    <form id="whatsappForm">
+                    <form>
                         <div class="form-group">
                             <label for="name">Nama Lengkap</label>
                             <input type="text" id="name" name="name" required>
@@ -675,22 +774,5 @@
             <p class="copyright">© 2025 Sambal Seuhah Mantap</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const ownerNumber = '6281910207238';
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            const whatsappMessage = `Halo, saya ${name}.\n\nEmail: ${email}\nNo. WhatsApp: ${phone}\n\nPesan:\n${message}`;
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            
-            window.open(`https://wa.me/${ownerNumber}?text=${encodedMessage}`, '_blank');
-        });
-    </script>
 </body>
 </html>
