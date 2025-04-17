@@ -708,7 +708,7 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
-                            <p>+62 819-1020-7890</p>
+                            <p>+62 819-1020-7238</p>
                         </div>
                     </div>
                     
@@ -732,31 +732,55 @@
                 </div>
                 
                 <div class="contact-form">
-                    <h3 class="contact-title">Kirim Pesan</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">No. WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Pesan</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-button">KIRIM PESAN</button>
-                    </form>
-                </div>
+    <h3 class="contact-title">Kirim Pesan</h3>
+    <form id="whatsappForm">
+        <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">No. WhatsApp</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-button">KIRIM PESAN</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Ganti dengan nomor WhatsApp pemilik produk (format: 6281910207238)
+        const ownerNumber = '6281910207238';
+        
+        // Mengambil nilai dari form
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+        
+        // Membuat teks pesan yang akan dikirim
+        const whatsappMessage = `Halo, saya ${name}.\n\nEmail: ${email}\nNo. WhatsApp: ${phone}\n\nPesan:\n${message}`;
+        
+        // Encode pesan untuk URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // Membuka link WhatsApp dengan pesan
+        window.open(`https://wa.me/${ownerNumber}?text=${encodedMessage}`, '_blank');
+    });
+</script>
             </div>
         </div>
     </section>
