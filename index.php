@@ -368,7 +368,7 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 30px 0 15px;
+            padding: 30px 20px;
             text-align: center;
         }
         
