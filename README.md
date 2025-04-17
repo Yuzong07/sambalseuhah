@@ -784,20 +784,18 @@
             </div>
         </div>
     </section>
-    
-       <!-- Footer Section -->
-<footer id="footer" class="section-footer">
-    <div class="container">
-        <div class="footer-content">
-            <h2 class="footer-title">Hubungi Kami</h2>
+     <!-- Footer -->
+    <footer>
+        <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i> Sambalseuhah07</a>
-                <a href="#" class="social-link"><i class="fab fa-facebook"></i> Sambalseuhah07</a>
-                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i> +62 819-1020-7238</a>
-                <a href="#" class="social-link"><i class="fab fa-shopify"></i> SambalSeuhah07</a>
+                <a href="#"><i class="fab fa-instagram"></i> Sambalseuhah07</a>
+                <a href="#"><i class="fab fa-facebook"></i> Sambalseuhah07</a>
+                <a href="#"><i class="fab fa-whatsapp"></i> +62 819-1020-7238</a>
+                <a href="#"><i class="fab fa-shopify"></i> SambalSeuhah07</a>
             </div>
+            
             <p class="copyright">© 2025 Sambal Seuhah Mantap</p>
         </div>
-</footer>
+    </footer>
 </body>
 </html>
