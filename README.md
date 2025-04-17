@@ -708,7 +708,7 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
-                            <p>+62 819-1020-7890</p>
+                            <p>+62 819-1020-7238</p>
                         </div>
                     </div>
                     
